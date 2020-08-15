@@ -12,11 +12,13 @@ $(document).ready(function () {
 });
 
 // Handles the Dashboard panels
+
 class Dashboard {
   constructor(viewer, panels) {
     var _this = this;
     this._viewer = viewer;
     this._panels = panels;
+    this.removeOld();
     this.adjustLayout();
     this._viewer.addEventListener(
       Autodesk.Viewing.GEOMETRY_LOADED_EVENT,
@@ -26,6 +28,9 @@ class Dashboard {
     );
   }
 
+  removeOld() {
+    $('.col-sm-3').remove();
+  }
   adjustLayout() {
     // this function may vary for layout to layout...
     // for learn forge tutorials, let's get the ROW and adjust the size of the
