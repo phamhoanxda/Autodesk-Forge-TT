@@ -27,11 +27,28 @@ body {
   width: 20%;
 }
 .col-sm-9 {
-  width: 80%;
+  width: 60%;
+}
+.col-sm-3 {
+  width: 20%;
 }
 #phamhoanxda {
   position: relative;
   left: 30px;
   top: 45px;
   font-size: 12px;
+}
+#dashboard {
+  overflow: auto;
+  height: calc(100vh - 100px);
+}
+
+.transition-width {
+  transition: width 1s ease-in-out;
+}
+
+.dashboardPanel {
+  width: 100%;
+  padding: 3%;
+  display: block;
 }
