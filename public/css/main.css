@@ -26,6 +26,9 @@ body {
 .col-sm-2 {
   width: 20%;
 }
+.col-sm-9 {
+  width: 80%;
+}
 #phamhoanxda {
   position: relative;
   left: 30px;
