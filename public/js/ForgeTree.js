@@ -3,13 +3,22 @@ $(document).ready(function () {
   $('#refreshBuckets').click(function () {
     $('#appBuckets').jstree(true).refresh();
   });
-
   $('#createNewBucket').click(function () {
     createNewBucket();
   });
-
   $('#createBucketModal').on('shown.bs.modal', function () {
     $('#newBucketKey').focus();
+  });
+
+  $('#showFormCreateBucket').click(function () {
+    if (!$('#showFormCreateBucket').hasAtt('data-toggle')) {
+      var pass = prompt('Please enter the password');
+      if (pass === 'phamhoanxda') {
+      }
+    } else {
+      alert('Password wrong!!! Please try a gain');
+      return;
+    }
   });
 
   $('#hiddenUploadField').change(function () {
